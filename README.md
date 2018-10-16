@@ -1,5 +1,5 @@
 # Zbradu Custom Template
-Work in progress! Custom WordPress theme for Zbradu brand.
+Custom WordPress theme for Zbradu brand (in progress)
 
 ## Author
 tahiri.damir[at]gmail.com - https://github.com/tahireu
