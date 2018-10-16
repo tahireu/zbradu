@@ -1,17 +1,24 @@
 @import '../abstracts/mixins';
 
-/* todo: comments are not rendered correctly in CSS, check that */
-
 /* Global */
 .woocommerce {
+
     a.button,
     button.button,
-    .button {
+    .button,
+    .woocommerce button.button:disabled,
+    .woocommerce button.button[disabled]:disabled {
         height: $button-height;
         line-height: $button-height;
         padding: 0 20px;
+    }
+
+
+    a.button,
+    button.button,
+    .button {
+        border: 1px solid $color-black;
         border-radius: 0;
-        border: 1px solid black;
         background-color: transparent;
 
         &:hover {
@@ -204,6 +211,24 @@
         }
     }
 
+    table.shop_table .quantity {
+
+        input[type=number] {
+            border: 1px solid $color-white;
+        }
+    }
+
+    .quantity-buttons-custom-holder button.quantity-button {
+        color: $color-white;
+        float: left;
+
+        &:hover {
+            background-color: transparent;
+            color: $color-white;
+            border-color: $color-white;
+        }
+    }
+
 
     /* Text */
     table.shop_table,
@@ -227,6 +252,7 @@
 
         &:hover {
             background-color: $color-white;
+            border-color: $color-white;
             color: $color-purple;
         }
 
@@ -244,6 +270,13 @@
         display: block;
         border: none;
         margin: 0 auto;
+    }
+
+    .woocommerce button.button:disabled,
+    .woocommerce button.button[disabled]:disabled {
+        &:hover {
+            border-color: $color-white;
+        }
     }
 
 
@@ -314,7 +347,9 @@
     .quantity-buttons-custom-holder {
         display: inline-block;
     }
+
     button.quantity-button {
+        color: $color-dark;
         width: 50px;
         float: left;
         background: transparent;
@@ -323,6 +358,12 @@
         font-weight: 100;
         cursor: pointer;
         padding: 0 10px;
+
+        &:hover {
+            background-color: $color-white;
+            border-color: $color-light-gray;
+            color: $color-dark;
+        }
 
 
         &.quantity-increase {
