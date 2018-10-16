@@ -1,0 +1,50 @@
+/* Fonts */
+$font-family: "Helvetica Neue", sans-serif;
+$font-family-secondary: 'Chewy', cursive;
+$font-family-icons: 'zbradu-icons';
+$font-family-icons-secondary: "FontAwesome";
+
+
+/* Colors */
+$color-red: #FF0000;
+$color-purple: #8A2BE2;
+$color-purple-dark: #6e22b4;
+$color-blue: #337ab7;
+$color-blue-darker: #23527c;
+$color-green-woocommerce: #8fae1b;
+
+$color-black: #000;
+$color-woocommerce-border: rgba(0,0,0,.1);
+$color-dark: #323232;
+$color-medium-gray: #7c7c80;
+$color-light-gray: #ccc;
+$color-white: #fff;
+
+$color-link: $color-blue;
+
+
+/* Icons */
+$icon-zbradu-search: "\e902";
+$icon-zbradu-cart: "\e901";
+$icon-zbradu-account: "\e900";
+
+$icon-fa-facebook: "\f082";
+$icon-fa-twitter: "\f081";
+$icon-fa-instagram: "\f16d";
+$icon-fa-eye: "\f06e";
+$icon-fa-cart: "\f217";
+$icon-fa-caret: "\f0d7";
+
+
+/* Various variables */
+$header-height: 550px;
+$navbar-height: 70px;
+$navbar-padding: 15px;
+$input-height: 54px;
+$button-height: $input-height;
+
+$default-content-padding-sides: 15px;
+$default-content-padding: 20px;
+
+$font-size: 14px;
+

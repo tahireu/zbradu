@@ -1,0 +1,43 @@
+@import "../abstracts/mixins";
+
+.zbradu-navbar,
+.menu {
+    list-style: none;
+
+    a {
+        color: $color-white;
+    }
+
+    a,
+    &:hover {
+        text-decoration: none !important;
+    }
+
+    li {
+        display: inline-block;
+    }
+}
+
+.zbradu-navbar-vertical li {
+    display: block;
+}
+
+.zbradu-navbar-right { // todo: remove "zbradu-"
+    float: right;
+}
+
+.zbradu-navbar-left { // todo: remove "zbradu-"
+    float: left;
+}
+
+.zbradu-navbar-center {
+    @include centered-content();
+    padding: $navbar-padding;
+    width: 100%;
+    text-align: center;
+
+    li {
+        display: inline-block;
+        float: none;
+    }
+}

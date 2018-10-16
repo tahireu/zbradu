@@ -1,0 +1,32 @@
+@import '../abstracts/mixins';
+
+/* WooCommerce look-alike pagination nav style */
+.zbradu-navigation {
+    padding-top: 40px;
+
+    .page-numbers:first-child {
+        margin-left: 0;
+    }
+    .page-numbers {
+        display: inline-block;
+        padding: .5em;
+        margin-left: -1px;
+        border: 1px solid #d3ced2;
+        line-height: 1;
+        text-decoration: none;
+        float: left;
+        font-size: 1em;
+        font-weight: 400;
+        min-width: 1em;
+    }
+
+    a.page-numbers {
+        color: #000;
+    }
+
+    .page-numbers.current,
+    a.page-numbers:hover {
+        background: #ebe9eb;
+        color: #8a7e88;
+    }
+}

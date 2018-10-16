@@ -1,0 +1,72 @@
+@import "../abstracts/mixins";
+
+.wpcf7 {
+
+    // Global
+    label,
+    input,
+    textarea {
+        width: 100%;
+    }
+
+
+    input,
+    textarea {
+        font-weight: 300;
+        font-size: 18px;
+    }
+
+
+    label {
+        font-size: 0;
+
+        span {
+            font-size: 14px;
+        }
+    }
+
+    p {
+        float: left;
+        width: 100%;
+    }
+
+
+
+    // Name and email
+    p:nth-child(2),
+    p:nth-child(3) {
+        width: 49.5%;
+        float: left;
+    }
+
+    p:nth-child(2) {
+        margin-right: 0.5%;
+    }
+
+    p:nth-child(3) {
+        margin-left: 0.5%;
+    }
+
+
+    // Submit Button
+    .wpcf7-submit {
+        background-color: $color-red;
+        color: $color-white;
+        border-color: $color-red;
+        max-width: 200px;
+        margin-top: 20px;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+
+    // Confirmation
+    div.wpcf7-response-output {
+        margin-left: 0;
+        margin-right: 0;
+        border: 2px solid $color-purple
+    }
+}

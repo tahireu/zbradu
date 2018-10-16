@@ -1,0 +1,29 @@
+@import "../abstracts/mixins";
+
+.article__title {
+    padding: 20px 0;
+
+    h1 {
+        font-family: $font-family-secondary;
+        color: $color-black;
+        font-size: 50px;
+    }
+}
+
+.article__image {
+    width: 30%;
+    float: left;
+    padding-right: 20px;
+    padding-bottom: 20px;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.article__thumbnail {
+    float: left;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}

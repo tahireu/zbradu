@@ -1,0 +1,150 @@
+@import '../abstracts/mixins';
+
+
+.header__overlay {
+    z-index: $z-index-overlay;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $color-purple;
+    padding: 20px;
+    overflow: auto;
+
+    .header__overlay-inner {
+        @include centered-content();
+        position: relative;
+        display: table;
+        height: 100%;
+    }
+
+    .loader-image {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: $color-white;
+        border-radius: 50%;
+        -webkit-animation: spin 1s ease-in-out infinite;
+        animation: spin 1s ease-in-out infinite;
+
+        .loader-image-inner {
+            position: relative;
+            width: 30px;
+            height: 30px;
+
+            &:after {
+                position: absolute;
+                content: '';
+                background-color: $color-purple;
+                width: 14px;
+                height: 14px;
+                top: 2px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+// Top
+.header__overlay--top {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: inherit;
+
+    .logo {
+        margin-top: 35px;
+        width: 200px;
+        height: auto;
+        float: left;
+    }
+
+    .close-trigger {
+        @include icon-x($position: "absolute", $size: 35px, $weight-in-px: 3px, $animate: true);
+        margin-top: 35px;
+        float: right;
+    }
+}
+
+// Middle
+.header__overlay--middle {
+    display: table-cell;
+    vertical-align: middle;
+
+    .form-control {
+        height: 60px;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid $color-light-gray;
+        border-radius: 0;
+        font-size: 30px;
+        color: $color-white;
+        box-shadow: none;
+        width: 100%;
+        outline: none;
+
+        @include input-placeholder {
+            color: $color-white;
+            font-weight: 100;
+        }
+    }
+}
+
+// Bottom
+.header__overlay--bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    li.menu-item a {
+        color: $color-white;
+    }
+
+    .bottom--left {
+        float: left;
+        width: 66.6%;
+    }
+
+    .bottom--right {
+        float: right;
+        width: 33.3%;
+        padding: 15px 0;
+
+        li.menu-item {
+            //float: left; todo: check if this can be removed
+        }
+    }
+
+
+    .zbradu-navbar-left {
+        padding-left: 0; // todo: probably remove when bootstrap is removed
+
+        li.menu-item {
+            float: left;
+
+            a {
+                padding: 20px;
+                float: left;
+
+                &:hover {
+                    color: $color-purple;
+                    background-color: $color-white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .zbradu-navbar-right a:before {
+        //padding-top: 15px; todo: check if this can be removed
+    }
+}

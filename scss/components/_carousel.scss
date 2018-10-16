@@ -1,0 +1,98 @@
+@import "../abstracts/mixins";
+
+.owl-carousel {
+    background: $color-black;
+
+    .item {
+        height: $header-height;
+        overflow: hidden;
+    }
+
+    .item img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        width: 100%;
+        height: auto;
+    }
+
+    .owl-dots {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+
+        .owl-dot span {
+            background-color: $color-white;
+        }
+
+        .owl-dot.active span {
+            background-color: $color-red;
+        }
+
+        .owl-dot:hover span {
+            background-color: $color-red;
+            opacity: 0.5;
+            @include default-transition();
+        }
+
+    }
+}
+
+
+.carousel-indicators li,
+.carousel-indicators li.active {
+    margin: 6px;
+    width: 12px;
+    height: 12px;
+}
+
+.carousel-indicators li {
+    @include default-transition();
+    background-color: $color-white;
+    border-color: $color-white;
+}
+
+.carousel-indicators li:hover {
+    background-color: rgba(255, 0, 0, 0.5);
+    border-color: rgba(255, 0, 0, 0.5);
+}
+
+.carousel-indicators li.active,
+.carousel-indicators li.active:hover {
+    background-color: $color-red;
+    border-color: $color-red;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .carousel .item {
+        height: 440px;
+    }
+}
+
+
+
+@media only screen and (max-width: 645px) {
+    .carousel .item {
+        height: 340px;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .carousel .item {
+        height: 240px;
+    }
+}
+
+
+@media only screen and (max-width: 360px) {
+    .carousel .item {
+        height: 200px;
+    }
+}

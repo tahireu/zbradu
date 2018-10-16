@@ -1,0 +1,55 @@
+@import "../abstracts/mixins";
+
+/* Icons for menu items with specific CSS classes */
+.zbradu-fa-facebook,
+.zbradu-fa-twitter,
+.zbradu-fa-instagram {
+    width: 24px;
+    height: 28px;
+    margin-left: 8px;
+}
+
+.open-search,
+.shopping-cart,
+.user-account {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+}
+
+.zbradu-fa-facebook,
+.zbradu-fa-twitter,
+.zbradu-fa-instagram,
+.open-search,
+.shopping-cart,
+.user-account {
+
+    &.menu-item a:hover {
+        background-color: transparent; //overwrite bootstrap hover background color todo: remove when bootstrap is removed
+    }
+}
+
+
+.open-search {
+    @include menu-icons ($icon-zbradu-search, $font-family-icons);
+}
+
+.shopping-cart {
+    @include menu-icons ($icon-zbradu-cart, $font-family-icons);
+}
+
+.user-account {
+    @include menu-icons ($icon-zbradu-account, $font-family-icons);
+}
+
+.zbradu-fa-facebook {
+    @include menu-icons ($icon-fa-facebook, $font-family-icons-secondary);
+}
+
+.zbradu-fa-twitter {
+    @include menu-icons ($icon-fa-twitter, $font-family-icons-secondary);
+}
+
+.zbradu-fa-instagram {
+    @include menu-icons ($icon-fa-instagram, $font-family-icons-secondary);
+}

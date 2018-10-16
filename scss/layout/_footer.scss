@@ -1,0 +1,111 @@
+@import "../abstracts/mixins";
+
+
+// Global footer style
+.footer {
+    background-color: $color-black;
+    color: $color-white;
+
+    .footer__top,
+    .footer__bottom {
+        @include centered-content();
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+
+        a {
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+// Footer top style
+.footer .footer__top {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    .footer__top__left,
+    .footer__top__middle,
+    .footer__top__right {
+        width: 33.33%;
+    }
+
+    .footer__top__left{
+        float: left;
+    }
+
+    .footer__top__middle {
+        float: left;
+        text-align: center;
+    }
+
+    .footer__top__right {
+        float: right;
+        text-align: right;
+    }
+}
+
+
+// Footer bottom style
+.footer .footer__bottom {
+    display: table;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .footer__bottom__left,
+    .footer__bottom__right {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .footer__bottom__left {
+        width: 66.66%;
+        a {
+            @include default-transition();
+            &:hover {
+                color: $color-red;
+            }
+        }
+    }
+
+    .footer__bottom__right {
+        width: 33.33%;
+    }
+
+    p {
+        margin: 0;
+    }
+
+
+    // Adjustments for items published in Footer Bottom position
+    ul li {
+
+        // Display separator between menu items
+        &:after {
+            content: " |";
+        }
+
+        &:last-child:after {
+            content: "";
+        }
+
+
+        // Do not display separators for icon menus
+        &.zbradu-fa-facebook,
+        &.zbradu-fa-twitter,
+        &.zbradu-fa-instagram {
+
+            &:after {
+                content: "";
+            }
+        }
+    }
+
+    .footer__bottom__left ul li {
+        display: inline-block;
+    }
+}
