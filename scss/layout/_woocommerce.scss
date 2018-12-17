@@ -48,6 +48,14 @@
             margin: 0;
         }
     }
+
+    #rememberme {
+        height: 14px;
+    }
+
+    .woocommerce-form__label.woocommerce-form__label-for-checkbox.inline {
+        padding-left: 15px;
+    }
 }
 
 :focus {
@@ -469,6 +477,8 @@
             -o-transition: opacity .5s ease;
             transition: opacity .5s ease;
             pointer-events: none;
+            // Backface is causing animation issues, and since it's not needed now, it can be hidden
+            -webkit-backface-visibility: hidden;
         }
 
         &:hover a.woocommerce-loop-product__link .wp-post-image {

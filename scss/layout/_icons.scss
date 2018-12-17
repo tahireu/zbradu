@@ -6,14 +6,15 @@
 .zbradu-fa-instagram {
     width: 24px;
     height: 28px;
-    margin-left: 8px;
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 .open-search,
 .shopping-cart,
 .user-account {
-    width: 30px;
-    height: 30px;
+    width: $menu-icons-height;
+    height: $menu-icons-height;
     margin-left: 15px;
 }
 
@@ -52,4 +53,17 @@
 
 .zbradu-fa-instagram {
     @include menu-icons ($icon-fa-instagram, $font-family-icons-secondary);
+}
+
+
+
+@media only screen and (max-width: 510px) {
+
+    .open-search,
+    .shopping-cart,
+    .user-account {
+        width: $menu-icons-height-responsive;
+        height: $menu-icons-height-responsive;
+        margin-left: 15px;
+    }
 }

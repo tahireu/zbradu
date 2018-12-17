@@ -53,7 +53,7 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             content: $icon;
-            font-size: 28px;
+            font-size: $menu-icons-height;
             z-index: 1;
             @include default-transition();
         }
@@ -68,6 +68,16 @@
     &:hover a:before,
     &.active a:before{
         color: $color-red;
+    }
+
+    /* Responsiveness */
+    @media only screen and (max-width: 510px) {
+        a {
+
+            &:before {
+                font-size: $menu-icons-height-responsive;
+            }
+        }
     }
 }
 

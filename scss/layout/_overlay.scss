@@ -118,15 +118,11 @@
         float: right;
         width: 33.3%;
         padding: 15px 0;
-
-        li.menu-item {
-            //float: left; todo: check if this can be removed
-        }
     }
 
 
     .zbradu-navbar-left {
-        padding-left: 0; // todo: probably remove when bootstrap is removed
+        padding-left: 0;
 
         li.menu-item {
             float: left;
@@ -143,8 +139,59 @@
             }
         }
     }
+}
 
-    .zbradu-navbar-right a:before {
-        //padding-top: 15px; todo: check if this can be removed
+
+
+@media only screen and (max-width: 510px) {
+
+    .header__overlay--top {
+
+        .logo {
+            width: 150px;
+            margin-top: 15px;
+        }
+
+        .close-trigger {
+            margin-top: 5px;
+            @include icon-x($position: "absolute", $size: 25px, $weight-in-px: 3px, $animate: true);
+        }
+    }
+
+
+    .header__overlay--bottom {
+
+        .bottom--left,
+        .bottom--right {
+            width: 100%;
+        }
+
+        .bottom--right {
+            padding: 20px 0 0;
+        }
+
+        .zbradu-navbar-left {
+            width: 100%;
+
+            li.menu-item {
+                width: 100%;
+                float: none;
+                text-align: center;
+
+                a {
+                    padding: 5px;
+                    float: left;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+
+        .zbradu-navbar-right {
+            float: none;
+            padding: 0;
+            text-align: center;
+        }
+
     }
 }

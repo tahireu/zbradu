@@ -169,9 +169,6 @@
             }
 
             &.open {
-                //background-color: $color-dark;
-                //color: $color-white;
-                //border-bottom: 1px solid $color-red;
 
                 .dropdown-menu {
                     opacity: 1;
@@ -209,3 +206,88 @@
     }
 }
 
+
+
+
+/* Responsiveness */
+@media only screen and (max-width: 1020px) {
+
+    .header__hero {
+        height: $header-height-responsive;
+    }
+
+
+    .header__navigation-bar {
+
+        .zbradu-navbar {
+            height: auto;
+            padding: 10px;
+
+            > .menu-item {
+                padding: 5px;
+
+                > a {
+                    font-family: $font-family;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+
+                &:after {
+                    display: none;
+                }
+
+                .dropdown-menu,
+                .dropdown-menu .menu-item a {
+                    -webkit-transition: none;
+                    -moz-transition: none;
+                    -o-transition: none;
+                    transition: none;
+                }
+
+                &.open {
+                    .dropdown-menu {
+                        display: none; // temporary disable dropdown on small screens until sketch of psd design and behaviour description for this is provided
+                        z-index: $z-index-dropdown-menu;
+                        visibility: visible;
+                        top: 0;
+                        padding: 10px 5px 5px;
+
+                        .menu-item a {
+                            text-align: center;
+                            padding: 5px;
+                            border-bottom: none;
+                        }
+                    }
+
+                    &:before {
+                        background-color: transparent;
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+
+        .caret:after {
+            font-size: 15px;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 510px) {
+
+    .header__hero {
+        height: $header-height-responsive-small;
+    }
+
+    .header__logo-bar .header__logo-bar-inner {
+
+        .logo img {
+            width: 140px;
+        }
+
+        #menu-user-menu {
+            padding: 30px 0 20px 10px;
+        }
+    }
+}

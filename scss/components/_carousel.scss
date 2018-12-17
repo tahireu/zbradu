@@ -68,31 +68,15 @@
 }
 
 
-
-@media only screen and (max-width: 768px) {
-    .carousel .item {
-        height: 440px;
+@media only screen and (max-width: 1020px) {
+    .owl-carousel .item {
+        height: $header-height-responsive;
     }
 }
 
 
-
-@media only screen and (max-width: 645px) {
-    .carousel .item {
-        height: 340px;
-    }
-}
-
-
-@media only screen and (max-width: 500px) {
-    .carousel .item {
-        height: 240px;
-    }
-}
-
-
-@media only screen and (max-width: 360px) {
-    .carousel .item {
-        height: 200px;
+@media only screen and (max-width: 510px) {
+    .owl-carousel .item {
+        height: $header-height-responsive-small;
     }
 }
