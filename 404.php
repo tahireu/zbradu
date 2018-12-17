@@ -5,19 +5,19 @@
         <div class="col-sm-12">
 
             <div class="error-404__header">
-                <h1 class="page-title">Sorry, page not found!</h1>
+                <h1 class="page-title"><?php __( 'Sorry, page not found!', 'zbradu_text_domain' ) ?></h1>
             </div>
 
             <div class="error-404__content">
 
-                <h4>It looks like nothing was found at this location. Maybe try one of the links below or a search?</h4>
+                <h4><?php __( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'zbradu_text_domain') ?></h4>
 
                 <?php get_search_form(); ?>
 
                 <?php the_widget('WP_Widget_Recent_Posts');  ?>
 
                 <div class="widget widget_categories">
-                    <h3>Check the most used categories</h3>
+                    <h3><?php __( 'Check the most used categories', 'zbradu_text_domain') ?></h3>
                     <ul>
                         <?php
                             wp_list_categories(array(

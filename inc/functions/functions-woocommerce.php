@@ -53,7 +53,7 @@ function new_loop_shop_per_page( $cols ) {
 add_filter( 'woocommerce_get_sections_products', 'add_section_wc_customize', 10, 1);
 function add_section_wc_customize ($sections) {
 
-    $sections['wc_customizer_shop'] = __( 'Products per row/page', 'zbradu');
+    $sections['wc_customizer_shop'] = __( 'Products per row/page', 'zbradu_text_domain');
     return $sections;
 }
 
@@ -68,17 +68,17 @@ function wc_customize_all_settings ( $settings, $current_section) {
 
         /* Add Title to the Settings */
         $settings_wc_customize[] = array(
-            'name' => __('Number of products per row and per page', 'text-domain'),
+            'name' => __('Number of products per row and per page', 'zbradu_text_domain'),
             'type' => 'title',
-            'desc' => __('Select number of products which will be displayed per row and per page', 'text-domain'),
+            'desc' => __('Select number of products which will be displayed per row and per page', 'zbradu_text_domain'),
             'id' => 'wc_product_customizer'
         );
 
 
         /* Add first text field option */
         $settings_wc_customize[] = array(
-            'name' => __('Products Per Row:', 'text-domain'),
-            'sect_tip' => __('The number typed here will change the number of products per row on shop page.', 'text-domain'),
+            'name' => __('Products Per Row:', 'zbradu_text_domain'),
+            'sect_tip' => __('The number typed here will change the number of products per row on shop page.', 'zbradu_text_domain'),
             'id' => 'wc_num_of_products_per_row',
             'type' => 'text',
             'css' => 'min-width: 300px;'
@@ -87,8 +87,8 @@ function wc_customize_all_settings ( $settings, $current_section) {
 
         /* Add second text field option */
         $settings_wc_customize[] = array(
-            'name' => __('Products Per Page:', 'text-domain'),
-            'sect_tip' => __('The number typed here will change the number of products per page on shop page.', 'text-domain'),
+            'name' => __('Products Per Page:', 'zbradu_text_domain'),
+            'sect_tip' => __('The number typed here will change the number of products per page on shop page.', 'zbradu_text_domain'),
             'id' => 'wc_num_of_products_per_page',
             'type' => 'text',
             'css' => 'min-width: 300px;'

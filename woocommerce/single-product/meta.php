@@ -22,6 +22,4 @@ global $product;
 
     <?php do_action( 'woocommerce_product_meta_end' ); ?>
 
-    <!-- todo: Compare this file with original in Woocommerce folder, probably strings needs to be moved into __()-->
-
 </div>

@@ -25,19 +25,19 @@
 
 
                 <!-- Categories -->
-                <?php echo zbradu_get_terms($post->ID, 'category', ' | Category: '); ?> <!-- If it's standard post type -->
-                <?php echo zbradu_get_terms($post->ID, 'event-category', ' | Category: '); ?> <!-- If it is custom post type -->
-                <?php echo zbradu_get_terms($post->ID, 'product_cat', ' | Category: '); ?> <!-- If it is WooCommerce products post type -->
+                <?php echo zbradu_get_terms($post->ID, 'category', ' | ' . __('Category: ', 'zbradu_text_domain')); ?> <!-- If it's standard post type -->
+                <?php echo zbradu_get_terms($post->ID, 'event-category', ' | ' . __('Category: ', 'zbradu_text_domain')); ?> <!-- If it is custom post type -->
+                <?php echo zbradu_get_terms($post->ID, 'product_cat', ' | ' . __('Category: ', 'zbradu_text_domain')); ?> <!-- If it is WooCommerce products post type -->
 
 
                 <!-- Tags -->
-                <?php echo the_tags(' | Tags: '); ?> <!-- If it's standard post type -->
-                <?php echo zbradu_get_terms($post->ID, 'event-tag', ' | Tags: '); ?> <!-- If it is custom post type -->
-                <?php echo zbradu_get_terms($post->ID, 'product_tag', ' | Tags: '); ?> <!-- If it is WooCommerce products post type -->
+                <?php echo the_tags(' | ' . __('Tags: ', 'zbradu_text_domain')); ?> <!-- If it's standard post type -->
+                <?php echo zbradu_get_terms($post->ID, 'event-tag', ' | ' . __('Tags: ', 'zbradu_text_domain')); ?> <!-- If it is custom post type -->
+                <?php echo zbradu_get_terms($post->ID, 'product_tag', ' | ' . __('Tags: ', 'zbradu_text_domain')); ?> <!-- If it is WooCommerce products post type -->
 
 
                 <!-- Edit post link -->
-                <?php echo edit_post_link('Edit Item', ' | '); ?>
+                <?php echo edit_post_link(__('Edit Item', 'zbradu_text_domain'), ' | '); ?>
 
             </small>
 
